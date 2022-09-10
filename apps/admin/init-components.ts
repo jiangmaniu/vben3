@@ -1,7 +1,7 @@
 // 按需导入组件
-import {
+import naive, {
   NTag,
-  // NCard,
+  NCard,
   NDivider,
   NSpace,
   NPopover,
@@ -55,6 +55,20 @@ import {
   NForm,
   NFormItem,
   NDropdown,
+  NInputNumber,
+  NTreeSelect,
+  NBadge,
+  NListItem,
+  NList,
+  NAutoComplete,
+  NCascader,
+  NDatePicker,
+  NTimePicker,
+  NRate,
+  NSlider,
+  NTransfer,
+  NMention,
+  NFormItemGi,
 } from 'naive-ui'
 
 import {
@@ -67,8 +81,8 @@ import { Card } from 'ant-design-vue'
 export async function registerComponents(app) {
   initVbenComponent(app, {
     Tag: NTag,
-    // Card: NCard,
-    Card: Card,
+    Card: NCard,
+    // Card: Card,
     Menu: NMenu,
     Divider: NDivider,
     Space: NSpace,
@@ -79,6 +93,7 @@ export async function registerComponents(app) {
     Statistic: NStatistic,
     Select: NSelect,
     Input: NInput,
+    InputNumber: NInputNumber,
     Form: NForm,
     FormItem: NFormItem,
     Thing: NThing,
@@ -117,9 +132,23 @@ export async function registerComponents(app) {
     LayoutSider: NLayoutSider,
     LayoutContent: NLayoutContent,
     Dropdown: NDropdown,
+    TreeSelect: NTreeSelect,
+    Badge: NBadge,
+    ListItem: NListItem,
+    List: NList,
+    AutoComplete: NAutoComplete,
+    Cascader: NCascader,
+    DatePicker: NDatePicker,
+    TimePicker: NTimePicker,
+    Rate: NRate,
+    Slider: NSlider,
+    Transfer: NTransfer,
+    Mention: NMention,
+    FormItemGi: NFormItemGi,
   })
   setMessage(useMessage)
   setNotice(useNotification)
   // @ts-ignore
+  // app.use(naive)
   locale.locale = zhCN
 }
